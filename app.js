@@ -14,7 +14,6 @@ app.all("*", (req, res, next) => {
   });
 });
 
-const port = 3000;
-const server = app.listen(port, () => {
+const server = app.listen(() => {
   console.log(`App running on port ${port}...`);
 });
