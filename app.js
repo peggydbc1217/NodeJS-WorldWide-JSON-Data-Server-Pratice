@@ -15,5 +15,5 @@ app.all("*", (req, res, next) => {
 });
 
 const server = app.listen(() => {
-  console.log(`App running on port ${port}...`);
+  console.log(`App running `);
 });
