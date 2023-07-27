@@ -14,7 +14,9 @@ router.get("/cities", (req, res) => {
 });
 
 router.get("/cities/:id", (req, res) => {
-  const city = data.cities.find((city) => city.id === req.params.id);
+  const city = data.cities.find((city) => {
+    return city.id === +req.params.id;
+  });
 
   res.status(200).json({
     status: "success",
