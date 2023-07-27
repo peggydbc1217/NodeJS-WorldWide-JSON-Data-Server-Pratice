@@ -24,13 +24,12 @@ router.get("/cities/:id", (req, res) => {
 });
 
 router.post("/cities", (req, res) => {
-  console.log("data--", data);
   data.cities.push(req.body);
 
   res.status(200).json({
     status: "success",
     results: data.cities.length,
-    data: data.cities,
+    data: req.body,
   });
 });
 
