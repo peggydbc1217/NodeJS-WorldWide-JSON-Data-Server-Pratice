@@ -14,6 +14,6 @@ app.all("*", (req, res, next) => {
   });
 });
 
-const server = app.listen(() => {
+const server = app.listen(process.env.PORT, () => {
   console.log(`App running `);
 });
